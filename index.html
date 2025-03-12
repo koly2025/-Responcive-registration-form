@@ -1,0 +1,80 @@
+<!DOCTYPE html> <!-- ডকুমেন্ট টাইপ ঘোষণা, এটি HTML5 ডকুমেন্ট -->
+<html lang="en" dir="ltr"> <!-- HTML ডকুমেন্টের ভাষা ইংরেজি এবং লেখার দিক বাম থেকে ডান (LTR) -->
+<head>
+  <meta charset="UTF-8"> <!-- পৃষ্ঠা কোডিং চরিত্র সেট হিসেবে UTF-8 নির্বাচন -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- রেসপন্সিভ ডিজাইন নিশ্চিত করার জন্য ভিউপোর্ট মেটা ট্যাগ -->
+  <title> Responsive Registration Form</title> <!-- পৃষ্ঠা শিরোনাম সেট করা হয়েছে -->
+  <link rel="stylesheet" href="style.css"> <!-- বাইরের CSS ফাইল লিংক করা হয়েছে -->
+</head>
+<body>
+  <div class="container"> <!-- পুরো ফর্মটি একটি কন্টেইনারের মধ্যে রাখা -->
+    <!-- Title section -->
+    <div class="title">Registration</div> <!-- পৃষ্ঠার শিরোনাম -->
+    <div class="content"> <!-- কন্টেন্টের অংশ -->
+      <!-- Registration form -->
+      <form action="#"> <!-- ফর্মের জন্য অ্যাকশন ডিফাইন করা, যেখানে # ঠিকানা নির্ধারণ করে -->
+        <div class="user-details"> <!-- ইউজারের বিস্তারিত তথ্য রাখার জন্য একটি ডিভ -->
+          <!-- Input for Full Name -->
+          <div class="input-box"> <!-- ইনপুট বক্সের জন্য একটি ডিভ -->
+            <span class="details">Full Name</span> <!-- ইনপুটের ট্যাগ -->
+            <input type="text" placeholder="Enter your name" required> <!-- পূর্ণ নামের ইনপুট ফিল্ড -->
+          </div>
+          <!-- Input for Username -->
+          <div class="input-box"> <!-- ইনপুট বক্সের জন্য একটি ডিভ -->
+            <span class="details">Username</span> <!-- ইনপুটের ট্যাগ -->
+            <input type="text" placeholder="Enter your username" required> <!-- ইউজারনেমের ইনপুট ফিল্ড -->
+          </div>
+          <!-- Input for Email -->
+          <div class="input-box"> <!-- ইনপুট বক্সের জন্য একটি ডিভ -->
+            <span class="details">Email</span> <!-- ইনপুটের ট্যাগ -->
+            <input type="text" placeholder="Enter your email" required> <!-- ইমেইল ইনপুট ফিল্ড -->
+          </div>
+          <!-- Input for Phone Number -->
+          <div class="input-box"> <!-- ইনপুট বক্সের জন্য একটি ডিভ -->
+            <span class="details">Phone Number</span> <!-- ইনপুটের ট্যাগ -->
+            <input type="text" placeholder="Enter your number" required> <!-- ফোন নম্বর ইনপুট ফিল্ড -->
+          </div>
+          <!-- Input for Password -->
+          <div class="input-box"> <!-- ইনপুট বক্সের জন্য একটি ডিভ -->
+            <span class="details">Password</span> <!-- ইনপুটের ট্যাগ -->
+            <input type="text" placeholder="Enter your password" required> <!-- পাসওয়ার্ড ইনপুট ফিল্ড -->
+          </div>
+          <!-- Input for Confirm Password -->
+          <div class="input-box"> <!-- ইনপুট বক্সের জন্য একটি ডিভ -->
+            <span class="details">Confirm Password</span> <!-- ইনপুটের ট্যাগ -->
+            <input type="text" placeholder="Confirm your password" required> <!-- পাসওয়ার্ড কনফার্ম ইনপুট ফিল্ড -->
+          </div>
+        </div>
+        <div class="gender-details"> <!-- জেন্ডার নির্বাচন সেকশন -->
+          <!-- Radio buttons for gender selection -->
+          <input type="radio" name="gender" id="dot-1"> <!-- পুরুষ বেছে নেওয়ার জন্য রেডিও বাটন -->
+          <input type="radio" name="gender" id="dot-2"> <!-- নারী বেছে নেওয়ার জন্য রেডিও বাটন -->
+          <input type="radio" name="gender" id="dot-3"> <!-- জানানো না বা 'প্রিফার না' বেছে নেওয়ার জন্য রেডিও বাটন -->
+          <span class="gender-title">Gender</span> <!-- জেন্ডার শিরোনাম -->
+          <div class="category"> <!-- জেন্ডারের ক্যাটেগরি ডিভ -->
+            <!-- Label for Male -->
+            <label for="dot-1"> <!-- পুরুষের জন্য লেবেল -->
+              <span class="dot one"></span> <!-- পুরুষের জন্য একটি ডট -->
+              <span class="gender">Male</span> <!-- পুরুষ শব্দ -->
+            </label>
+            <!-- Label for Female -->
+            <label for="dot-2"> <!-- নারীর জন্য লেবেল -->
+              <span class="dot two"></span> <!-- নারীর জন্য একটি ডট -->
+              <span class="gender">Female</span> <!-- নারী শব্দ -->
+            </label>
+            <!-- Label for Prefer not to say -->
+            <label for="dot-3"> <!-- প্রিফার না সিলেক্ট করার জন্য লেবেল -->
+              <span class="dot three"></span> <!-- প্রিফার না ডট -->
+              <span class="gender">Prefer not to say</span> <!-- প্রিফার না সিলেক্ট শব্দ -->
+            </label>
+          </div>
+        </div>
+        <!-- Submit button -->
+        <div class="button"> <!-- সাবমিট বাটন সেকশন -->
+          <input type="submit" value="Register"> <!-- রেজিস্টার বাটন -->
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,188 @@
+/* Google Fonts থেকে Poppins ফন্ট ইমপোর্ট করা হয়েছে */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* সকল এলিমেন্টে মর্জিন, প্যাডিং ০ করা হয়েছে, বক্স সাইজিং বর্ডার-বক্স করা হয়েছে, এবং ফন্ট-ফ্যামিলি Poppins সেট করা হয়েছে */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* পুরো পৃষ্ঠার জন্য স্টাইল */
+body {
+  height: 100vh; /* পৃষ্ঠার উচ্চতা পুরো স্ক্রীন হবে */
+  display: flex; /* ফ্লেক্সবক্স লেআউট ব্যবহার হবে */
+  justify-content: center; /* কনটেন্টকে অনুভূমিকভাবে কেন্দ্রিত করা হবে */
+  align-items: center; /* কনটেন্টকে উল্লম্বভাবে কেন্দ্রিত করা হবে */
+  padding: 10px; /* প্যাডিং যুক্ত করা হয়েছে */
+  background: linear-gradient(135deg, #71b7e6, #9b59b6); /* ব্যাকগ্রাউন্ডে গ্রেডিয়েন্ট কালার ব্যবহার হয়েছে */
+}
+
+/* কন্টেইনারের স্টাইল */
+.container {
+  max-width: 700px; /* সর্বাধিক প্রস্থ ৭০০px */
+  width: 100%; /* প্রস্থ ১০০% */
+  background-color: #fff; /* ব্যাকগ্রাউন্ড সাদা */
+  padding: 25px 30px; /* প্যাডিং */
+  border-radius: 5px; /* কোণার রেডিয়াস */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); /* ছায়া যোগ করা হয়েছে */
+}
+
+/* টাইটেল সেকশনের স্টাইল */
+.container .title {
+  font-size: 25px; /* ফন্ট সাইজ ২৫px */
+  font-weight: 500; /* ফন্ট ওয়েট ৫০০ */
+  position: relative; /* পজিশন রিলেটিভ */
+}
+
+/* টাইটেলের নিচে লাইন স্টাইল */
+.container .title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6); /* গ্রেডিয়েন্ট ব্যাকগ্রাউন্ড */
+}
+
+/* ইউজার ডিটেইলস সেকশনের স্টাইল */
+.content form .user-details {
+  display: flex; /* ফ্লেক্স লেআউট */
+  flex-wrap: wrap; /* এলিমেন্টগুলো নতুন লাইনে যাবে */
+  justify-content: space-between; /* এলিমেন্টগুলোর মাঝে সমান জায়গা রাখা */
+  margin: 20px 0 12px 0;
+}
+
+/* ইনপুট বক্সের স্টাইল */
+form .user-details .input-box {
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px); /* প্রস্থ ৫০% থেকে ২০px কমানো হবে */
+}
+
+/* ইনপুট বক্সের লেবেল স্টাইল */
+form .input-box span.details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+/* ইনপুট ফিল্ডের স্টাইল */
+.user-details .input-box input {
+  height: 45px; /* ইনপুটের উচ্চতা ৪৫px */
+  width: 100%; /* প্রস্থ ১০০% */
+  outline: none; /* আউটলাইন না থাকবে */
+  font-size: 16px; /* ফন্ট সাইজ ১৬px */
+  border-radius: 5px; /* কোণার রেডিয়াস */
+  padding-left: 15px; /* বাম পাশে ১৫px প্যাডিং */
+  border: 1px solid #ccc; /* সীমানা ১px গ্রে */
+  border-bottom-width: 2px; /* নীচের সীমানা ২px */
+  transition: all 0.3s ease; /* ট্রানজিশন */
+}
+
+/* ইনপুট ফিল্ড ফোকাস বা ভ্যালিড হলে বর্ডার রঙ পরিবর্তন */
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+  border-color: #9b59b6; /* বর্ডার কালার পরিবর্তন */
+}
+
+/* জেন্ডার সেকশনের টাইটেল স্টাইল */
+form .gender-details .gender-title {
+  font-size: 20px; /* ফন্ট সাইজ ২০px */
+  font-weight: 500; /* ফন্ট ওয়েট ৫০০ */
+}
+
+/* জেন্ডার বাটনের কন্টেইনার স্টাইল */
+form .category {
+  display: flex; /* ফ্লেক্স লেআউট */
+  width: 80%; /* প্রস্থ ৮০% */
+  margin: 14px 0; /* মার্জিন */
+  justify-content: space-between; /* এলিমেন্টগুলোর মাঝে সমান জায়গা */
+}
+
+/* লেবেলের স্টাইল */
+form .category label {
+  display: flex;
+  align-items: center;
+  cursor: pointer; /* কার্সর পয়েন্টার হবে */
+}
+
+/* ডট বাটনের স্টাইল */
+form .category label .dot {
+  height: 18px; /* ডটের উচ্চতা */
+  width: 18px; /* ডটের প্রস্থ */
+  border-radius: 50%; /* বৃত্তাকার ডট */
+  margin-right: 10px; /* ডটের ডান পাশে ১০px মার্জিন */
+  background: #d9d9d9; /* ব্যাকগ্রাউন্ড গ্রে */
+  border: 5px solid transparent; /* বর্ডার */
+  transition: all 0.3s ease; /* ট্রানজিশন */
+}
+
+/* রেডিও বাটন সিলেক্ট করলে ডটের রঙ পরিবর্তন হবে */
+#dot-1:checked~.category label .one,
+#dot-2:checked~.category label .two,
+#dot-3:checked~.category label .three {
+  background: #9b59b6; /* ব্যাকগ্রাউন্ড কালার */
+  border-color: #d9d9d9; /* বর্ডার কালার */
+}
+
+/* রেডিও বাটন হাইড করা হবে */
+form input[type="radio"] {
+  display: none;
+}
+
+/* সাবমিট বাটনের স্টাইল */
+form .button {
+  height: 45px; /* বাটনের উচ্চতা */
+  margin: 35px 0; /* মার্জিন */
+}
+
+/* সাবমিট বাটনের স্টাইল */
+form .button input {
+  height: 100%; /* উচ্চতা ১০০% */
+  width: 100%; /* প্রস্থ ১০০% */
+  border-radius: 5px; /* কোণার রেডিয়াস */
+  border: none; /* বর্ডার হটানো */
+  color: #fff; /* টেক্সট সাদা */
+  font-size: 18px; /* ফন্ট সাইজ ১৮px */
+  font-weight: 500; /* ফন্ট ওয়েট ৫০০ */
+  letter-spacing: 1px; /* লেটার স্পেসিং */
+  cursor: pointer; /* কার্সর পয়েন্টার */
+  transition: all 0.3s ease; /* ট্রানজিশন */
+  background: linear-gradient(135deg, #71b7e6, #9b59b6); /* গ্রেডিয়েন্ট ব্যাকগ্রাউন্ড */
+}
+
+/* সাবমিট বাটনের হোভার স্টাইল */
+form .button input:hover {
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6); /* হোভার করলে গ্রেডিয়েন্ট পরিবর্তন হবে */
+}
+
+/* মোবাইল ডিভাইসের জন্য রেসপন্সিভ স্টাইল */
+@media(max-width: 584px) {
+  .container {
+    max-width: 100%; /* কন্টেইনারের প্রস্থ ১০০% হবে */
+  }
+  form .user-details .input-box {
+    margin-bottom: 15px; /* ইনপুট বক্সের নিচে ১৫px মার্জিন */
+    width: 100%; /* ইনপুট বক্সের প্রস্থ ১০০% */
+  }
+  form .category {
+    width: 100%; /* ক্যাটেগরির প্রস্থ ১০০% */
+  }
+  .content form .user-details {
+    max-height: 300px; /* ইউজার ডিটেইলসের সর্বাধিক উচ্চতা */
+    overflow-y: scroll; /* স্ক্রোলবার যোগ করা হবে */
+  }
+  .user-details::-webkit-scrollbar {
+    width: 5px; /* স্ক্রোলবারের প্রস্থ */
+  }
+}
+
+/* মোবাইল ডিভাইসের জন্য আরও রেসপন্সিভ স্টাইল */
+@media(max-width: 459px) {
+  .container .content .category {
+    flex-direction: column; /* ফ্লেক্স ডিরেকশন কলামে পরিবর্তিত হবে */
+  }
+}
